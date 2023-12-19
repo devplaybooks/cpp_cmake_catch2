@@ -4,6 +4,9 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE-GPLv3)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE-MIT)
 
+
+https://github.com/devcontainers/features/blob/main/src/common-utils/README.md
+
 ---
 
 # Base Template for Dev Playbooks

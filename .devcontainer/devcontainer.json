@@ -1,20 +1,48 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/cpp
+// Based on https://github.com/microsoft/vscode-remote-try-cpp?tab=readme-ov-file
 {
-    "name": "Codespaces Node.js Starter",
-    "extensions": [
-        "coenraads.bracket-pair-colorizer-2",
-        "cschleiden.vscode-github-actions",
-        "github.vscode-pull-request-github",
-        "ms-azuretools.vscode-docker",
-        "ms-vsliveshare.vsliveshare",
-        "vscode-icons-team.vscode-icons",
-        "visualstudioexptteam.vscodeintellicode"
-    ],
-    "dockerFile": "Dockerfile",
-    "settings": {
-        "terminal.integrated.shell.linux": "/usr/bin/zsh",
-        "files.exclude": {
-            "**/CODE_OF_CONDUCT.md": true,
-            "**/LICENSE": true
+    "name": "C++ Dev Playbook",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+
+        },
+        "ghcr.io/devcontainers/features/desktop-lite:1": {},            // https://github.com/devcontainers/features/tree/main/src/desktop-lite
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {},        // https://github.com/devcontainers/features/tree/main/src/docker-in-docker
+        "ghcr.io/devcontainers/features/github-cli:1": {},              // https://github.com/devcontainers/features/tree/main/src/github-cli
+        "ghcr.io/devcontainers-contrib/features/actions-runner:1": {},  // https://github.com/devcontainers-contrib/features/tree/main/src/actions-runner
+        "ghcr.io/devcontainers-contrib/features/actionlint:1": {},      // https://github.com/devcontainers-contrib/features/tree/main/src/actionlint
+        "ghcr.io/devcontainers-contrib/features/direnv:1": {},          // https://github.com/devcontainers-contrib/features/tree/main/src/direnv
+        "ghcr.io/devcontainers-contrib/features/fd:1": {},              // https://github.com/devcontainers-contrib/features/tree/main/src/fd
+    },
+
+    // Configure tool-specific properties.
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            "settings": {},
+            "extensions": [
+                "cheshirekow.cmake-format",
+                "eamodio.gitlens",
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools",
+                "streetsidesoftware.code-spell-checker",
+                "twxs.cmake",
+                "vadimcn.vscode-lldb",
+                "xaver.clang-format"
+            ]
         }
-    }
+    },
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
+
+    // Use 'postCreateCommand' to run commands after the container is created.
+    //  "postCreateCommand": "",
+
+    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+    // "remoteUser": "root"
 }
